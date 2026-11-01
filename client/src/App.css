@@ -1,0 +1,303 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #101410;
+  color: white;
+  font-family: 'Inter', sans-serif;
+}
+
+.app {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Navbar */
+
+.navbar {
+  height: 85px;
+  padding: 0 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #101410;
+}
+
+.logo {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.logo span,
+footer span {
+  color: #b6f238;
+}
+
+.nav-links {
+  display: flex;
+  gap: 35px;
+}
+
+.nav-links a {
+  color: #d5d5d5;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #b6f238;
+}
+
+.join-btn,
+.primary-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #b6f238;
+  color: #101410;
+  border: none;
+  padding: 14px 23px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+/* Hero */
+
+.hero {
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  padding: 70px 8%;
+  background:
+    linear-gradient(90deg, rgba(12,17,12,0.98) 0%,
+    rgba(12,17,12,0.86) 45%,
+    rgba(12,17,12,0.15) 100%),
+    url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48")
+    center/cover no-repeat;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.tagline {
+  color: #b6f238;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(65px, 9vw, 105px);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: 1px;
+}
+
+.hero h1 span {
+  color: #b6f238;
+}
+
+.hero-description {
+  max-width: 460px;
+  color: #c0c0c0;
+  line-height: 1.8;
+  margin: 25px 0;
+  font-size: 14px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.primary-btn {
+  padding: 16px 24px;
+}
+
+.secondary-btn {
+  padding: 16px 24px;
+  background: transparent;
+  color: white;
+  border: 1px solid #777;
+  cursor: pointer;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 55px;
+  margin-top: 55px;
+}
+
+.hero-stats h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  color: #b6f238;
+  font-size: 32px;
+}
+
+.hero-stats p {
+  color: #aaa;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Features */
+
+.features {
+  padding: 85px 8%;
+  background: #171d17;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-heading p {
+  color: #b6f238;
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+.section-heading h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 42px;
+  margin-top: 12px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.feature-card {
+  background: #202820;
+  padding: 35px;
+  border: 1px solid #303b30;
+  transition: 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-7px);
+  border-color: #b6f238;
+}
+
+.feature-card svg {
+  color: #b6f238;
+}
+
+.feature-card h3 {
+  margin: 22px 0 12px;
+  font-size: 19px;
+}
+
+.feature-card p {
+  color: #aaa;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* Footer */
+
+footer {
+  background: #0c100c;
+  text-align: center;
+  padding: 45px 20px;
+}
+
+footer h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 32px;
+}
+
+footer p {
+  color: #999;
+  font-size: 12px;
+  margin-top: 12px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .nav-links,
+  .join-btn {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .hero {
+    padding: 65px 6%;
+    background-position: 60% center;
+  }
+
+  .hero-stats {
+    gap: 25px;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading h2 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-stats {
+    gap: 16px;
+  }
+
+  .hero-stats h2 {
+    font-size: 26px;
+  }
+
+  .hero-stats p {
+    font-size: 10px;
+  }
+
+  .hero-buttons {
+    flex-wrap: wrap;
+  }
+}
+.nav-links a {
+  color: #d5d5d5;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  color: #b6f238;
+}
+
+.join-btn {
+  text-decoration: none;
+}
